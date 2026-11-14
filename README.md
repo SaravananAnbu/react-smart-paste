@@ -2,6 +2,8 @@
 
 Paste any text and let AI fill your form. A React button and hook that read the form, send the pasted text to your model, show the proposed values, and fill the fields once the user approves. MIT licensed.
 
+**[Live demo](https://saravanananbu.github.io/react-smart-paste/)** · [npm](https://www.npmjs.com/package/react-smart-paste)
+
 - Works on plain HTML forms: no schema to declare, it reads names, labels, types and options from the page
 - Review before anything changes, per-field tick boxes, and undo
 - Never overwrites what the user already typed (unless you ask it to)
@@ -196,28 +198,9 @@ Available variables: `bg`, `fg`, `muted`, `border`, `hover`, `accent`, `on-accen
 
 `readFields(form)`, `applyValues(form, values)`, `buildSmartPastePrompt({ text, fields })` and `parseSmartPasteResponse(reply, fields)` are exported for building your own flow.
 
-## Development
+## Contributing
 
-```bash
-npm install
-npm run build      # ESM + CJS + types into dist/
-npm test
-npm run typecheck
-```
-
-`examples/vite` is a demo form that runs without an API key, using a mock model (plain pattern matching, labelled as such on the page). It installs the packed tarball: after changing the library, run `npm run build && npm pack`, reinstall in `examples/vite`, and restart its dev server.
-
-### Landing page
-
-`site/` is a static landing page with a live demo. It runs the library straight from `src/`, so it always matches this repository, and its demo uses the same kind of mock model as the example.
-
-```bash
-npm --prefix site install
-npm --prefix site run dev     # local preview on port 5186
-npm --prefix site run build   # static output in site/dist, deployable to any static host
-```
-
-`.github/workflows/pages.yml` publishes it to GitHub Pages on pushes to `main` that touch `site/` or `src/`. Turn Pages on first: repository Settings → Pages → Source: GitHub Actions.
+Setup, build and test instructions are in [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## License
 
