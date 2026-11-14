@@ -1,6 +1,6 @@
 {
   "name": "react-smart-paste",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Paste any text and let AI fill your form. A React hook and button that read the form, ask your model, preview the changes and apply them.",
   "license": "MIT",
   "repository": {
